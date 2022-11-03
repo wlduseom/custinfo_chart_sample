@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZGWCHARTB14_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ChartList" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Custid"/>
+                </Key>
+                <Property Name="Custid" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="고객 ID" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Custtp" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="고객 타입" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Custlnm" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="고객 성" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Custfnm" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="고객 이름" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Gender" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="성별" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Nation" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="국적" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Birth" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="생년월일" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Custtel" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="고객 연락처" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Custeml" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="고객 이메일" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="City" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="도시" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Zipcode" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="우편 번호" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Address" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="상세 주소" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Custdsct" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="고객 할인율" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Note" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="비고" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZGWCHARTB14_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ChartListSet" EntityType="ZGWCHARTB14_SRV.ChartList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://edu.bgis.co.kr:8001/sap/opu/odata/sap/ZGWCHARTB14_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://edu.bgis.co.kr:8001/sap/opu/odata/sap/ZGWCHARTB14_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
