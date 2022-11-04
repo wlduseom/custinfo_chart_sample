@@ -128,7 +128,7 @@ sap.ui.define([
 		},
 		getFeedItem: function(measureIndex) {
 			if (!this.isExist(measureIndex)) {
-				measureIndex = ['Custtel', 'Zipcode', 'Custdsct'];
+				measureIndex = ['plantS', 'plantJ', 'book', 'request'];
 			}
 			var feedPrimaryValues = {
 				uid: 'primaryValues',
@@ -138,13 +138,13 @@ sap.ui.define([
 			var feedAxisLabels = {
 				uid: 'axisLabels',
 				type: 'Dimension',
-				values: ['Custid']
+				values: ['gender']
 			};
 			return [new FeedItem(feedPrimaryValues), new FeedItem(feedAxisLabels)];
 		},
 		getFlattenedDataset: function(measureIndex) {
 			if (!this.isExist(measureIndex)) {
-				measureIndex = ['Custtel', 'Zipcode', 'Custdsct'];
+				measureIndex = ['plantS', 'plantJ', 'book', 'request'];
 			}
 			var measures = [];
 			measureIndex.map(function(item) {
@@ -156,19 +156,19 @@ sap.ui.define([
 			});
 			var dataset = {
 				dimensions: [{
-					name: 'Custid',
-					value: "{Custid}"
+					name: 'gender',
+					value: "{gender}"
 				}],
 				measures: measures,
 				data: {
-					path: 'Compo>/'
+					path: 'Gender>/genders'
 				}
 			};
 			return new FlattenedDataset(dataset);
 		},
 		getTitle: function(measureIndex) {
 			if (!this.isExist(measureIndex)) {
-				measureIndex = ['Custtel', 'Zipcode', 'Custdsct'];
+				measureIndex = ['plantS', 'plantJ', 'book', 'request'];
 			}
 			var text = null;
 			for (var i = 0; i < measureIndex.length; ++i) {
@@ -177,7 +177,7 @@ sap.ui.define([
 					text += ' and ';
 				}
 			}
-			text += ' by Customer ID';
+			text += ' by Gender';
 			return {
 				visible: true,
 				text: text

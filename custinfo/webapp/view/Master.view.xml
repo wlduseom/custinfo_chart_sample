@@ -14,19 +14,24 @@
 			selectionChange=".onChartTypeChanged"
 			includeItemInSelection="true">
 			<StandardListItem
-				id="Custtel"
-				title="Custtel"
-				description="Custtel"
+				id="PlantSeoul"
+				title="PlantSeoul"
+				description="PlantSeoul"
 				selected="true"/>
 			<StandardListItem
-				id="Zipcode"
-				title="Zipcode"
-				description="Zipcode"
+				id="PlantJeju"
+				title="PlantJeju"
+				description="PlantJeju"
 				selected="true"/>
 			<StandardListItem
-				id="Custdsct"
-				title="Custdsct"
-				description="Custdsct"
+				id="Book"
+				title="Book"
+				description="Book"
+				selected="true"/>
+			<StandardListItem
+				id="Request"
+				title="Request"
+				description="Request"
 				selected="true"/>
 		</List>
 		<Panel headerText="Chart Type">

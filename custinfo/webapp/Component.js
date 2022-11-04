@@ -18,9 +18,26 @@ sap.ui.define([
              * @override
              */
             init: function () {
+
+                var oData2 = {
+
+                    "genders" : [
+                        {
+                            "gender" : 'F', "plantS" : null, "plantJ" : null, "book" : null, "request" : null
+                        },
+                        {
+                            "gender" : 'M', "plantS" : null, "plantJ" : null, "book" : null, "request" : null
+                        },
+                    ]
+                    
+
+                };
+
                 var oModel = new JSONModel();
+                var oModel2 = new JSONModel(oData2);
 
                 this.setModel(oModel, "Compo");
+                this.setModel(oModel2, "Gender");
 
                 // call the base component's init function
                 UIComponent.prototype.init.apply(this, arguments);
